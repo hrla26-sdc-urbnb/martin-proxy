@@ -12,6 +12,7 @@ proxy.use(bodyParser.json());
 proxy.use(bodyParser.urlencoded({ extended: true }));
 proxy.use(cors());
 proxy.use(express.static(path.join(__dirname, './public/')));
+proxy.use(express.static(path.join(__dirname, './loaderio')));
 proxy.use('/api', router);
 
 proxy.listen(PORT, (err) => {
