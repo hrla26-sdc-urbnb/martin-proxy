@@ -4,7 +4,7 @@ const axios = require('axios');
 router.route('/units/:id')
   .get((req, res) => {
     const { id } = req.params;
-    axios.get(`http://localhost:2100/api/units/${id}`)
+    axios.get(`http://54.211.210.36:2100/api/units/${id}`)
       .then(({ data }) => {
         res.send(data);
       });
